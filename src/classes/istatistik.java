@@ -26,14 +26,14 @@ public class istatistik {
 	public double getGolreyting() {
 		return golreyting;
 	}
-	public void setGolreyting(float golreyting) {
+	public void setGolreyting(double golreyting) {
 		this.golreyting = golreyting;
 	}
 	public double getAsistreyting() {
 		return asistreyting;
 	}
-	public void setAsistreyting(float asistreyting) {
-		this.asistreyting = asistreyting;
+	public void setAsistreyting(double assistRating) {
+		this.asistreyting = assistRating;
 	}
 	
 	

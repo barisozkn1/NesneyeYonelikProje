@@ -1,8 +1,9 @@
 package classes;
 
 import interfaces.FutID;
+import interfaces.Observer;
 
-public class Futbolcu extends Mac implements FutID{
+public class Futbolcu extends Mac implements FutID, Observer{
 	private int futbolcuid;
 	private int yas;
 	private String ad;
@@ -76,6 +77,13 @@ public class Futbolcu extends Mac implements FutID{
 	public void setPozisyon(String pozisyon) {
 		this.pozisyon = pozisyon;
 	}
+	 @Override
+	    public void update(int goals, int assists, double goalRating, double assistRating) {
+	        setToplamgol(getToplamgol() + goals);
+	        setToplamasist(getToplamasist() + assists);
+	        setGolreyting(goalRating);
+	        setAsistreyting(assistRating);
+	    }
 	public void yazdir() {
 		System.out.println("Futbolcu ID: " + getFutbolcuid());
         System.out.println("Adı: " + getAd());
